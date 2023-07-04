@@ -1,0 +1,2 @@
+# anki-engineer-knowledge
+エンジニアとして身につけておくべき知識をankiにまとめたものを管理する
