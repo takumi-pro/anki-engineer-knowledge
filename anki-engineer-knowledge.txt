@@ -27,3 +27,55 @@ MACアドレスを説明せよ	データリンクに接続しているノード�
 イーサネットフレーム構造をEthernetIIフレームとIEEE802.3フレームの両方の仕様で説明せよ	EthernetIIフレーム（左から）<br>- プリアンブル、宛先MACアドレス、送信元MACアドレス、タイプ、データ、FCS<br><br>IEEEフレーム（左から）<br>- プリアンブル、SFD、宛先MACアドレス、送信元MACアドレス、タイプ、データ、FCS<br>	
 CSMA/CDの仕組みを説明せよ	1. 誰もデータを送信していないことを確認する<br>2. データを送信する<br>3. コリジョンが発生するとジャム信号を送信し各コンピュータに通知する<br>4. 乱数時間待機（バックオフアルゴリズム）し、再度データを送信する	
 VLANを説明せよ	仮想的なLANセグメントを作る技術<br>スイッチ内部で論理的にLANセグメントを分割することができる。L2スイッチでもブロードキャストドメインを分割可能	
+マルチキャストを説明せよ	特定のグループ宛にパケットを送信するために利用される。<br>アドレスは224.0.0.0 ~ 239.255.255.255の範囲	
+VPNを説明せよ	仮想的なプライベートネットワーク接続のこと。<br>	
+VPNの種類を上げてそれぞれ説明せよ	VPNはインターネットVPNとIP-VPNに分類できる。<br><br>インターネットVPN: インターネットなどの公衆網を利用したVPN。IPsec-VPNとSSK-VPNに分けられる。<br><br>IP-VPN: 通信事業者が提供するクローズドIPネットワークを利用したVPN	
+光ファイバーケーブルの2つの分類をあげてそれぞれ説明せよ	MMF（マルチモードファイバ）<br>プラスチックを使用。SMFに比べ長距離伝送には不向き<br><br>SMF（シングルモードファイバ）<br>ガラス繊維を使用。長距離伝送が可能。	
+i番目の要素へのアクセス、要素の挿入と削除について配列と連結リストの計算量を答えよ	配列<br>i番目の要素へのアクセス：O(1)<br>要素の挿入、削除：O(N)<br><br>連結リスト<br>i番目の要素へのアクセス：O(N)<br>要素の挿入、削除：O(1)<br>	
+イーサネットを説明せよ<br>	コンピュータネットワークの規格の一つでLANの規格。<br>IEEE802.3が定めている。	
+2つの同軸ケーブルの規格をそれぞれ説明せよ	10Base5<br>伝送距離：500m<br>トポロジー：バス型<br><br>10Base2<br>伝送距離：185m<br>トポロジーバス型	
+ツイストペアケーブルの規格を説明せよ	10Base-T<br>2対のCAT3以上・伝送距離：100m・10Mbps<br><br>100Base-TX<br>2対のCAT5以上・伝送距離：100m<br><br>100Base-T4<br>4対のCAT3以上・伝送距離100m<br><br>1000Base-T<br>4対CAT5e・伝送距離100m<br><br>10GBase-T<br>4対CAT6a/CAT7・伝送距離100m<br><br>	
+{1,2,3,4,5}の配列を降順にするコードをsortとラムダ式を用いてかけ	int arr[5] = {1,2,3,4,5};<br>sort(arr.begin(), arr.end(), [](int a, int b) {<br>&nbsp; return a &gt; b;<br>});	
+vectorで定義した{1,2,3,4,5}の配列を範囲for文で出力せよ	vector&lt;int&gt; a = {1,2,3,4,5};<br>for (int v : a) cout &lt;&lt; v &lt;&lt; endl;	
+IPv6アドレスの3つの分類をあげてそれぞれ説明せよ	ユニキャストアドレス<br>1対1の通信で利用されるアドレス。<br><br>マルチキャストアドレス<br>1対グループの通信で利用されるアドレス。<br><br>エニーキャストアドレス<br>グループに属する一つのインターフェイスにパケットが到達するとそれ以上は配送されない。グループで最も近いデバイスとだけ通信する。	
+IPv6のユニキャストの3つのスコープをそれぞれ説明せよ	リンクローカル<br>同一セグメント上の端末と通信する場合に使用されるアドレス。ルーティングされない。<br><br>ユニークローカル<br>IPv4のプライベートアドレスに相当する。<br><br>グローバル<br>IPv4のグローバルアドレスに相当する。	
+IPv6の構成を説明せよ	プレフィックスとインタフェースIDから構成される。<br>/（スラッシュ）でプレフィックスを示すことができる。<br>	
+配列と連結リストのメリットデメリット	配列<br>- メリット：i番目の要素にアクセスする計算量がO(1)<br>- デメリット：特定の要素の直後に別の要素を挿入したり、要素xを削除したりする場合は計算量がO(N)<br><br>連結リスト<br>- メリット：特定の要素の直後の挿入削除がO(1)<br>- デメリット：i番目のアクセスにO(N)	
+スタックとキューを説明せよ	スタック<br>LIFO(Last in first out)の動作をするデータ構造。<br><br>キュー<br>FIFO(first in first out)の動作をするデータ構造。	
+c++で1,2,3,4,5を挿入してそれぞれ出力するコードをかけ	"<div><div><span style=""color: #569cd6;"">int</span><span style=""color: #cccccc;""> </span><span style=""color: #9cdcfe;"">a</span><span style=""color: #cccccc;"">[</span><span style=""color: #b5cea8;"">5</span><span style=""color: #cccccc;"">] </span><span style=""color: #d4d4d4;"">=</span><span style=""color: #cccccc;""> {</span><span style=""color: #b5cea8;"">1</span><span style=""color: #cccccc;"">,</span><span style=""color: #b5cea8;"">2</span><span style=""color: #cccccc;"">,</span><span style=""color: #b5cea8;"">3</span><span style=""color: #cccccc;"">,</span><span style=""color: #b5cea8;"">4</span><span style=""color: #cccccc;"">,</span><span style=""color: #b5cea8;"">5</span><span style=""color: #cccccc;"">};</span></div><div><span style=""color: #cccccc;""> </span><span style=""color: #4ec9b0;"">stack</span><span style=""color: #d4d4d4;"">&lt;</span><span style=""color: #569cd6;"">int</span><span style=""color: #d4d4d4;"">&gt;</span><span style=""color: #cccccc;""> </span><span style=""color: #9cdcfe;"">s</span><span style=""color: #cccccc;"">;</span></div><div><span style=""color: #cccccc;""> </span><span style=""color: #c586c0;"">for</span><span style=""color: #cccccc;""> (</span><span style=""color: #569cd6;"">int</span><span style=""color: #cccccc;""> </span><span style=""color: #9cdcfe;"">i</span><span style=""color: #cccccc;""> </span><span style=""color: #d4d4d4;"">=</span><span style=""color: #cccccc;""> </span><span style=""color: #b5cea8;"">0</span><span style=""color: #cccccc;"">; </span><span style=""color: #9cdcfe;"">i</span><span style=""color: #cccccc;""> </span><span style=""color: #d4d4d4;"">&lt;</span><span style=""color: #cccccc;""> </span><span style=""color: #b5cea8;"">5</span><span style=""color: #cccccc;"">; </span><span style=""color: #9cdcfe;"">i</span><span style=""color: #d4d4d4;"">++</span><span style=""color: #cccccc;"">) </span><span style=""color: #9cdcfe;"">s</span><span style=""color: #cccccc;"">.</span><span style=""color: #dcdcaa;"">push</span><span style=""color: #cccccc;"">(</span><span style=""color: #9cdcfe;"">i</span><span style=""color: #d4d4d4;"">+</span><span style=""color: #b5cea8;"">1</span><span style=""color: #cccccc;"">);</span></div><div><span style=""color: #cccccc;""> </span><span style=""color: #c586c0;"">for</span><span style=""color: #cccccc;""> (</span><span style=""color: #569cd6;"">int</span><span style=""color: #cccccc;""> </span><span style=""color: #9cdcfe;"">i</span><span style=""color: #cccccc;""> </span><span style=""color: #d4d4d4;"">=</span><span style=""color: #cccccc;""> </span><span style=""color: #b5cea8;"">0</span><span style=""color: #cccccc;"">; </span><span style=""color: #9cdcfe;"">i</span><span style=""color: #cccccc;""> </span><span style=""color: #d4d4d4;"">&lt;</span><span style=""color: #cccccc;""> </span><span style=""color: #b5cea8;"">5</span><span style=""color: #cccccc;"">; </span><span style=""color: #9cdcfe;"">i</span><span style=""color: #d4d4d4;"">++</span><span style=""color: #cccccc;"">) {</span></div><div><span style=""color: #cccccc;""> </span><span style=""color: #9cdcfe;"">cout</span><span style=""color: #cccccc;""> </span><span style=""color: #dcdcaa;"">&lt;&lt;</span><span style=""color: #cccccc;""> </span><span style=""color: #9cdcfe;"">s</span><span style=""color: #cccccc;"">.</span><span style=""color: #dcdcaa;"">top</span><span style=""color: #cccccc;"">() </span><span style=""color: #dcdcaa;"">&lt;&lt;</span><span style=""color: #cccccc;""> </span><span style=""color: #dcdcaa;"">endl</span><span style=""color: #cccccc;"">;</span></div><div><span style=""color: #cccccc;""> </span><span style=""color: #9cdcfe;"">s</span><span style=""color: #cccccc;"">.</span><span style=""color: #dcdcaa;"">pop</span><span style=""color: #cccccc;"">();</span></div><div><span style=""color: #cccccc;"">  }</span></div></div>"	
+IPv6のループバックアドレスを答えよ	::1	
+IPv4ではARPブロードキャストでアドレスを解決するがIPv6ではどのような機能を使用するか。	Neighbor Discovery(ND)を使用する。<br>ICMPv6のNeighbor Solicitationメッセージと要請ノードマルチキャストにより解決する機能	
+IPv6のマルチキャストを説明せよ<br>	先頭8ビットが「1111 1111」から始まる。16進数では「ff00::8」となる。<br>次の4ビットがフラグ（永続かどうか）、次の4ビットがスコープ。<br><br>	
+IPv4射影アドレスを説明せよ<br>	先頭80ビットが全て0で、次の16ビットが全て1、残りの32ビットがIPv4アドレスを使用する。	
+IPv6のリンクローカルアドレス、ユニークローカルアドレス、マルチキャストアドレスはそれぞれ16進数で何から始まるか	リンクローカル：fe80<br>ユニークローカル：fc, fd<br>マルチキャスト：ff	
+IPv6のグローバルユニキャストアドレスについて説明せよ	先頭3ビットが001から始まるアドレスで「2000::/3」と表記できる。<br>グローバルルーティングプレフィックス48ビット、サブネットID16ビット、インタフェースID64ビットの3つのフィールドで構成されている。	
+IPv6のユニークローカルアドレスを説明せよ	先頭がfcまたはfdで始まる。fc00::/7、fc00::/8、fd00::/8<br>	
+IPv4とIPv6それぞれでインタフェースの情報をようやくして表示するコマンド	show ip interface brief<br>show ipv6 interface brief	
+IPv6ルーティングを有効にするコマンド	ipv6 unicast-routing	
+FTPの特徴をのべよ	- クライアントサーバ型<br>- TCPポート20（データ転送用）、21（制御用）を使用する<br>- 暗号化の機能を持たない<br>- 認証の機能を持つ	
+TFPTの特徴	- クライアントサーバ<br>- UDPポート69を使用<br>- 暗号化、認証持たない	
+ARPを説明せよ	IPアドレスからMACアドレスを取得するプロトコル。<br>ARPリクエストとARPリプライパケットを使う。<br>ARPリクエストはブロードキャストして該当するIPアドレスの機器がARPリプライパケットを送信する。	
+Cisco Merakiを説明せよ	自立型アクセスポイントをはじめとしたネットワーク機器の設定やネットワークの管理をクラウド上で行うシステム。<br>- GUIで操作可能	
+無線LANの規格は？	IEEE802.11	
+IEEE802.11の詳細な規格を説明せよ<br>それぞれの規格の特徴をあげる	IEEE802.11b<br>周波数帯：2.4GHz、最大速度：11Mbps<br><br>IEEE802.11a<br>周波数帯：5GHz、最大速度：54Mbps<br><br>IEEE802.11g<br>周波数帯：2.4GHz、最大速度：54Mbps<br><br>IEEE802.11n<br>周波数帯：2.4/5GHz、最大速度：600Mbps<br><br>IEEE802.11<br>周波数帯：5GHz、最大速度：6.9Gbps	
+スプリットMACアーキテクチャを説明せよ	アクセス制御の役割をAPとWLANコントローラで分割する方式<br>APの役割<br>- ビーコンの送信<br>- プローブの応答<br>- フレームのバッファリングと転送<br>- フレームの暗号化/復号化<br>- APの存在監視<br><br>コントローラの処理<br>- QoSポリシー<br>- セキュリティポリシー<br>- 認証<br>- RF管理<br>- モビリティ管理<br>- アソシエーションと再アソシエーション<br>- フレーム変換とブリッジング	
+自律型APについて説明せよ	AP単独でWLANを提供できる。接続機器の認証もAPが行う。<br>	
+集中管理型APを説明せよ	接続機器の管理や設定の管理はWLANコントローラが行う。	
+WLCを説明せよ	Wireless LAN Controllerの略。集中管理型のWLANで使われるデバイス。<br>	
+ローミングを説明せよ	無線LANクライアントが異なるAP間を渡り歩けるような機能のこと。<br>渡り歩く範囲のAPのESSIDは全て同じであることが必要。	
+LAPを説明せよ	電波の送受信のみを行う集中管理型APのこと。<br>WLCでLAPの設定管理をするにはLAPがWLCに登録される必要がある。<br><br>以下のやり取りが発生する<br>- CAPWAP Discovery Request（LAP送信）<br>- CAPWAP Discovery Response（WLC送信）<br>- CAPWAP Join Request（LAP送信）<br>- CAPWAP Join Response（WLC送信）<br>	
+無線LANフレームのフォーマットを説明せよ	PLCPプリアンブル、PLCPヘッダ、PSDUの3つで構成される。<br><br>- PSDU<br>IEEE802.11ヘッダと実際のデータから構成される情報。データリンク層で付加される。	
+IEEE802.11フレームのIEEE802.11ヘッダの詳細を説明せよ	左から<br>Frame Control, Duration/ID, Address 1, Address 2, Address 3, Sequence Control, Address 4で構成されている。	
+802.11bのチャネルについて説明せよ	1ch~14chの14チャネルが利用可能。<br>同時使用チャネル数は4つ（海外では3つ）でチャネル幅が22MHzであり、5MHzの間隔を空ける必要がある。	
+BSSとESSを説明せよ	BSS（Basic Service Set）<br>1つのAPとそのAPの電波内にいる配下の無線LANクライアントで構成されるネットワーク。<br><br>ESS（Extended Service Set）<br>複数のBSSで構成される無線LANのネットワーク	
+BSSID、ESSIDを説明せよ	BSSID<br>無線LANにおけるネットワーク識別しの1つで48ビットの数値。APのMACアドレスと同じ。<br><br>ESSID<br>最大32文字までの英数字を設定できる。<br>無線LANではESSIDが同じもの同士が通信することができる。	
+SSIDを説明せよ	無線LANにおけるAPの識別子。<br>	
+IEEE802.11ヘッダのフレーム制御のフィールドにある3つのフレームを答えよ	管理フレーム<br>制御フレーム<br>データフレーム	
+IEEE802.11ヘッダのフレーム制御フィールドの管理フレームを説明せよ	Beacon Frame<br>Association Request Frame<br>Association Response Frame<br>Probe Request Frame<br>Probe Response Frame<br>Disassociation Frame<br>Authentication Frame<br>Deauthentication Frame<br>がある	
+WLAN端末がBeaconフレームを一定時間で受信できなかった場合の無線LANへの接続手順を説明せよ	1. WLAN端末は自身が接続したいESSIDをブロードキャストする（Probe Request）<br>2. APはProbe Requestにより受信したESSIDが自身のESSIDと同じ場合応答する（Probe Response）<br>3. 認証<br>4. 関連付け<br>5. データフレームの送信	
+WDSを説明せよ	Wireless Distribution Systemの略。<br>AP同士を無線接続する機能のこと。以下が可能になる。<br>- 複数の有線LANを無線接続する<br>- リピータとして使用	
+RFを説明せよ	Radio FrequencyはWi-Fiなどの無線通信で使用する電波の周波数を指す	
+APのモードを説明せよ	Local<br>LAPのデフォルトモード。電波をつかて無線LANクライアントとデータを送受信する。<br><br>FlexConnect<br>WAN経由でWLCと接続するときに使用するモード<br><br>Monitor<br>不正なAPの検出、および侵入検知ようの専用センサーやRFIDタグ追跡ようの専用センサーとして動作するモード<br><br>Rogue Detector<br>有線ネットワーク上に不正なAPやクライアントがいないか監視するモード<br><br>Sniffer<br>特定のチャネル上の全てのパケットを収集して、指定したデバイスに送信<br><br>Bridge<br>APがブリッジとして動作するモード<br><br>SE-Connect<br>スペクトラムアナライザ専用モード	
+WLCが未知のAPを検出した時APをどのようなタイプに分類するか	Friendly：脅威ではない<br>Malicious：悪意のあるAP<br>Custom：管理者が新たに作成した分類<br>Unclassified：未分類	
+WLCに用意されているQoSの設定を答えよ	- Platinum<br>- Gold<br>- Silver<br>- Bronze	
+IEEE802.11aのチャネルについて説明せよ	利用可能はチャネル数は19（20）で、5GHzの周波数帯域を使用する。<br>チャネル間の重なりがないため、19（20）全てを同時使用できる。	
