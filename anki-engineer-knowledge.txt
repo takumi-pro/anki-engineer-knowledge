@@ -75,7 +75,15 @@ IEEE802.11ヘッダのフレーム制御フィールドの管理フレームを�
 WLAN端末がBeaconフレームを一定時間で受信できなかった場合の無線LANへの接続手順を説明せよ	1. WLAN端末は自身が接続したいESSIDをブロードキャストする（Probe Request）<br>2. APはProbe Requestにより受信したESSIDが自身のESSIDと同じ場合応答する（Probe Response）<br>3. 認証<br>4. 関連付け<br>5. データフレームの送信	
 WDSを説明せよ	Wireless Distribution Systemの略。<br>AP同士を無線接続する機能のこと。以下が可能になる。<br>- 複数の有線LANを無線接続する<br>- リピータとして使用	
 RFを説明せよ	Radio FrequencyはWi-Fiなどの無線通信で使用する電波の周波数を指す	
-APのモードを説明せよ	Local<br>LAPのデフォルトモード。電波をつかて無線LANクライアントとデータを送受信する。<br><br>FlexConnect<br>WAN経由でWLCと接続するときに使用するモード<br><br>Monitor<br>不正なAPの検出、および侵入検知ようの専用センサーやRFIDタグ追跡ようの専用センサーとして動作するモード<br><br>Rogue Detector<br>有線ネットワーク上に不正なAPやクライアントがいないか監視するモード<br><br>Sniffer<br>特定のチャネル上の全てのパケットを収集して、指定したデバイスに送信<br><br>Bridge<br>APがブリッジとして動作するモード<br><br>SE-Connect<br>スペクトラムアナライザ専用モード	
+APのモードを説明せよ	Local<br>LAPのデフォルトモード。電波を使って無線LANクライアントとデータを送受信する。<br>無線通信に1つのチャネルを利用し、他のチャネルとの干渉を監視する<br><br>FlexConnect<br>WAN経由でWLCと接続するときに使用するモード<br><br>Monitor<br>不正なAPの検出、および侵入検知ようの専用センサーやRFIDタグ追跡ようの専用センサーとして動作するモード<br><br>Rogue Detector<br>有線ネットワーク上に不正なAPやクライアントがいないか監視するモード<br><br>Sniffer<br>特定のチャネル上の全てのパケットを収集して、指定したデバイスに送信<br><br>Bridge<br>APがブリッジとして動作するモード<br><br>SE-Connect<br>スペクトラムアナライザ専用モード	
 WLCが未知のAPを検出した時APをどのようなタイプに分類するか	Friendly：脅威ではない<br>Malicious：悪意のあるAP<br>Custom：管理者が新たに作成した分類<br>Unclassified：未分類	
 WLCに用意されているQoSの設定を答えよ	- Platinum<br>- Gold<br>- Silver<br>- Bronze	
 IEEE802.11aのチャネルについて説明せよ	利用可能はチャネル数は19（20）で、5GHzの周波数帯域を使用する。<br>チャネル間の重なりがないため、19（20）全てを同時使用できる。	
+無線LAN通信の流れを説明せよ	1. WLAN端末が利用できる周波数帯域を自動スキャンする<br>2. WLAN端末とAPがお互いに一致するESSIDであるか確認する<br>3. WLAN端末とAPがお互いに認証を行う<br>4. アソシエーションを行う<br>5. 暗号化したIEEE802.11フレームを電波に乗せて伝送する<br>6. APでIEEE802.11フレームをEthernetフレームに変換して伝送する<br><br>使用チャネル、変調方式、ESSIDの相互確認が取れた後に「認証→アソシエーション→データのやり取り」というフロー	
+WPAを説明せよ	WiFi Protected Accesの略。<br>暗号化方式はTKIPで暗号化アルゴリズムはRC4	
+Fast SSID Changeを説明せよ	あるSSIDに接続している無線LANクライアントが、別のSSIDへ接続しようとした際にSSIDを素早く切り替える機能	
+WLCの物理ポートを説明せよ	コンソールポート<br>コンソールケーブルによりPCと接続<br>WLCノセッテイヤ、WLCの障害対応を行うために使われる<br><br>ディストリビューションシステムポート<br>LANケーブルによりスイッチと接続（スイッチ側はトランクポートモード）<br>通常のトラフィックや管理トラフィックを送受信するために使われる<br>LAGに対応<br><br><br>サービスポート<br>LANケーブルによりスイッチと接続（スイッチ側はアクセスポートモード）<br>ネットワーク障害児のシステム復旧とメンテナンスで使用する<br>ディストリビューションシステムポートで輻輳などがあっても影響を受けない<br><br>冗長ポート<br>LANケーブルによりWLCと接続<br>大規模なネットワークでWLCを冗長化するために使われる	
+WLCの論理インタフェースを説明せよ	Service Port<br>サービスポートと関連付けられるインタフェース<br><br>Management<br>WLCの管理用インタフェース<br>WLCの設定時のアクセス先や、Pingの宛先や、WLC間の通信の制御などで使用する<br><br>Virtual<br>代理DHCPサーバや、Web認証などの宛先になる仮想的なインタフェース<br><br>Dynamic<br>SSIDとVLANのマッピングを行うインタフェース	
+複数の物理リンクを束ねて1つの論理リンクとして扱うことのできる技術をなんというか	リンクアグリゲーション<br>CiscoではEtherChannel（Link Aggregation Group: LAG）<br>WLCとスイッチの両方で設定する。	
+CAPWAPを説明せよ	Control And Provisioning of Wireless Access Pointsの略。<br>LAPとWLC間で動作するプロトコル。CAPWAPトンネルはデータ用と制御用がある	
+ダイナミックアンカーを説明せよ	PCのIPアドレスを変更せず通信を可能にする機能	
